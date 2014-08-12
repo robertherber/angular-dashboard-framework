@@ -135,7 +135,7 @@ angular.module('adf')
         
         if (model) {
           if (!model.title){
-            model.title = 'Dashboard';
+            model.title = '';
           }
           $scope.model = model;
         } else {
