@@ -1,7 +1,11 @@
 {
   "name": "angular-dashboard-framework",
   "version": "0.1.0",
-  "main": "sample/components",
+  "main": 
+    [
+      "dist/angular-dashboard-framework.min.js",
+      "dist/angular-dashboard-framework.min.css"    
+    ],
   "dependencies": {
     "angular": "1.2.18",
     "angular-route": "1.2.18",
@@ -17,6 +21,21 @@
     "highcharts-ng": "0.0.6",
     "highcharts": "4.0.3"
   },
+  ignore: 
+      [
+      ".bowerrc",
+      ".gitignore",
+      ".tmp",
+      "Gruntfile.js",
+      "src",
+      ".jshintrc",
+      "node_modules",
+      "bower.json",
+      "package.json",
+      "README.md",
+      "sample"
+      ]
+  ,
   "devDependencies": {
     "angular-mocks": "1.2.18",
     "angular-scenario": "1.2.18"
