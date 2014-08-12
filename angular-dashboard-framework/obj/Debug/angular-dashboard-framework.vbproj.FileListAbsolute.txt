@@ -1,1 +1,0 @@
-C:\wrk\angular-dashboard-framework\angular-dashboard-framework\bin\Debug\angular-dashboard-framework.exe.config
