@@ -21,7 +21,7 @@
     "highcharts-ng": "0.0.6",
     "highcharts": "4.0.3"
   },
-  ignore: 
+  "ignore": 
       [
       ".bowerrc",
       ".gitignore",
