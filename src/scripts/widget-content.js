@@ -50,6 +50,9 @@ angular.module('adf')
       var model = $scope.model;
       var content = $scope.content;
 
+      //check to see if we have a configuration for this widget
+      if (!$scope.content) return;
+
       // display loading template
       $element.html(dashboard.loadingTemplate);
 

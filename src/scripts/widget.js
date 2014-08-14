@@ -59,7 +59,7 @@ angular.module('adf')
           // collapse
           $scope.isCollapsed = false;
         } else {
-          $log.warn('could not find widget ' + type);
+          $log.warn('could not find widget ' + definition.type);
         }
       } else {
         $log.debug('definition not specified, widget was probably removed');
