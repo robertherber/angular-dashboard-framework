@@ -108,7 +108,7 @@ angular.module('adf')
         // sortable options for drag and drop
         $scope.sortableOptions = {
           connectWith: ".column",
-          handle: ".glyphicon-move",
+          handle: ".panel-heading-draggable",
           cursor: 'move',
           tolerance: 'pointer',
           placeholder: 'placeholder',
@@ -177,7 +177,10 @@ angular.module('adf')
         };
 
         // add widget dialog
-        $scope.addWidgetDialog = function(){
+        $scope.addWidgetDialog = function(row, col){
+          var row = row ? row : 0,
+            col = col ? col : 0;
+
           var addScope = $scope.$new();
           addScope.widgets = dashboard.widgets;
           var opts = {
@@ -190,7 +193,7 @@ angular.module('adf')
               type: widget,
               config: createConfiguration(widget)
             };
-            addScope.model.rows[0].columns[0].widgets.unshift(w);
+            addScope.model.rows[row].columns[col].widgets.unshift(w);
             instance.close();
 
             addScope.$destroy();

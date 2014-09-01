@@ -66,7 +66,13 @@ angular.module('sample-02', ['adf', 'LocalStorageModule'])
   $scope.model = model;
   $scope.collapsible = false;
 
+  $scope.$watch('model', function(model){
+    console.log(model);
+    localStorageService.set(name, model);
+  });
+
   $scope.$on('adfDashboardChanged', function(event, name, model) {
+
     localStorageService.set(name, model);
   });
 });

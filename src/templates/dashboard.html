@@ -1,15 +1,13 @@
-<div class="dashboard-bidbase dashboard-container">
+<div class="dashboard-bidbase dashboard-container" ng-class="editClass">
     <h1>
         {{model.title}}
         <span style="font-size: 16px" class="pull-right">
-            <a href="" ng-if="editMode" title="add new widget" ng-click="addWidgetDialog()">
-                <i class="glyphicon glyphicon-plus-sign"></i>
-            </a>
             <a href="" ng-if="editMode" title="edit dashboard" ng-click="editDashboardDialog()">
                 <i class="glyphicon glyphicon-cog"></i>
             </a>
-            <a href="" title="{{editMode ? 'disable edit mode' : 'enable edit mode'}}" ng-click="toggleEditMode()">
-                <i class="glyphicon glyphicon-edit"></i>
+            <a href="" title="{{editMode ? 'Save dashboard' : 'Edit dashboard'}}" ng-click="toggleEditMode()">
+                <i class="glyphicon glyphicon-edit" ng-hide="editMode"></i>
+                <i class="glyphicon glyphicon-floppy-disk" ng-hide="!editMode"></i>
             </a>
         </span>
     </h1>
@@ -21,6 +19,9 @@
                 <div class="widgets" ng-repeat="definition in col.widgets">
                     <adf-widget definition="definition" column="col" edit-mode="{{editMode}}" collapsible="collapsible" />
                 </div>
+                <a href="" ng-if="editMode" title="Add new widget" class="addWidgetBtn" ng-click="addWidgetDialog($parent.$parent.$index, $parent.$index)">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                </a>
             </div>
         </div>
 

@@ -1,5 +1,5 @@
 <div class="dashboard-bidbase widget panel panel-default">
-  <div class="panel-heading">
+  <div class="panel-heading" ng-class="{'panel-heading-draggable': editMode}">
     <h3 class="panel-title">
     {{definition.title}}
       <span class="pull-right">
@@ -7,9 +7,9 @@
           <i class="glyphicon glyphicon-refresh"></i>
         </a>
         <!-- change widget location -->
-        <a href="" title="change widget location" ng-if="editMode">
+        <!--<a href="" title="change widget location" ng-if="editMode">
           <i class="glyphicon glyphicon-move"></i>
-        </a>
+        </a>-->
         <!-- collapse -->
         <a href="" title="collapse widget" ng-show="collapsible && !isCollapsed" ng-click="isCollapsed = !isCollapsed">
           <i class="glyphicon glyphicon-minus"></i>
