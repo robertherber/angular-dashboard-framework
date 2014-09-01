@@ -1,19 +1,14 @@
-<div class="dashboard-bidbase dashboard-container" ng-class="editClass">
-    <h1>
-        {{model.title}}
-        <span style="font-size: 16px" class="pull-right">
-            <a href="" ng-if="editMode" title="edit dashboard" ng-click="editDashboardDialog()">
-                <i class="glyphicon glyphicon-cog"></i>
-            </a>
-            <a href="" title="{{editMode ? 'Save dashboard' : 'Edit dashboard'}}" ng-click="toggleEditMode()">
-                <i class="glyphicon glyphicon-edit" ng-hide="editMode"></i>
-                <i class="glyphicon glyphicon-floppy-disk" ng-hide="!editMode"></i>
-            </a>
-        </span>
-    </h1>
-
+<div class="dashboard-bidbase dashboard-container">
+    <span style="font-size: 16px" class="pull-right">
+        <a href="" ng-if="editMode" title="edit dashboard" ng-click="editDashboardDialog()">
+            <i class="glyphicon glyphicon-cog"></i>
+        </a>
+        <a href="" title="{{editMode ? 'Save dashboard' : 'Edit dashboard'}}" ng-click="toggleEditMode()">
+            <i class="glyphicon glyphicon-edit" ng-hide="editMode"></i>
+            <i class="glyphicon glyphicon-floppy-disk" ng-hide="!editMode"></i>
+        </a>
+    </span>
     <div class="dashboard" ng-class="editClass">
-
         <div ng-repeat="row in model.rows" class="row" ng-class="row.styleClass">
             <div ng-repeat="col in row.columns" class="column" ng-class="col.styleClass" ui-sortable="sortableOptions" ng-model="col.widgets">
                 <div class="widgets" ng-repeat="definition in col.widgets">
