@@ -193,7 +193,7 @@ angular.module('adf')
               type: widget,
               config: createConfiguration(widget)
             };
-            addScope.model.rows[row].columns[col].widgets.unshift(w);
+            addScope.model.rows[row].columns[col].widgets.push(w);
             instance.close();
 
             addScope.$destroy();

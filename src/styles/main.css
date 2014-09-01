@@ -64,12 +64,13 @@ THE SOFTWARE.
     margin-bottom: 10px;
     -webkit-border-radius: 5px;
     padding-bottom: 15px;
-    border: 1px #fff dashed;
+    border: 1px #ccc dashed;
+    background-color: #fefefe;
 }
 
 .addWidgetBtn:hover{
     border: 1px #ccc dashed;
-    background-color: #fcfcfc;
+    background-color: #f9f9f9;
 }
 
 .panel-heading-draggable{
