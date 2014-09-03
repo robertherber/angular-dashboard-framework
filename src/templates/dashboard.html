@@ -10,9 +10,11 @@
     </span>
     <div class="dashboard" ng-class="editClass">
         <div ng-repeat="row in model.rows" class="row" ng-class="row.styleClass">
-            <div ng-repeat="col in row.columns" class="column" ng-class="col.styleClass" ui-sortable="sortableOptions" ng-model="col.widgets">
-                <div class="widgets" ng-repeat="definition in col.widgets">
-                    <adf-widget definition="definition" column="col" edit-mode="{{editMode}}" collapsible="collapsible" />
+            <div ng-repeat="col in row.columns" class="column" ng-class="col.styleClass">
+                <div class="droppable-column" ui-sortable="sortableOptions" ng-model="col.widgets">
+                    <div class="widgets" ng-repeat="definition in col.widgets">
+                        <adf-widget definition="definition" column="col" edit-mode="{{editMode}}" collapsible="collapsible" />
+                    </div>
                 </div>
                 <a href="" ng-if="editMode" title="Add new widget" class="addWidgetBtn" ng-click="addWidgetDialog($parent.$parent.$index, $parent.$index)">
                     <i class="glyphicon glyphicon-plus-sign"></i>
