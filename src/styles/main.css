@@ -23,19 +23,37 @@ THE SOFTWARE.
 */
 .dashboard-bidbase .edit .column {
     border: 1px #ccc dashed;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    
     padding-left: 0px;
     padding-right: 0px;
+
+    margin-bottom: 40px;
+    margin-left: -1px;
+}
+
+.dashboard-bidbase .edit .column:first-child {
+    margin-left: 0px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+}
+
+.dashboard-bidbase .edit .column:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-right-width: 1px;
 }
 
 .dashboard-bidbase .edit .droppable-column{
-    padding-top: 15px;
-    padding-bottom: 63px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px 15px 63px 15px;
 }
 
 .dashboard-bidbase pre.edit {
@@ -85,3 +103,4 @@ THE SOFTWARE.
 .panel-heading-draggable{
     cursor: move;
 }
+
