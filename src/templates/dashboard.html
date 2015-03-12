@@ -4,7 +4,7 @@
             <i class="glyphicon glyphicon-cog"></i>
         </a>
         <a href="" title="{{editMode ? 'Save dashboard' : 'Edit dashboard'}}" ng-click="toggleEditMode()">
-            <i class="glyphicon glyphicon-edit" ng-hide="editMode === 'false' || !editMode"></i>
+            <i class="glyphicon glyphicon-edit" ng-show="!editMode || editMode === 'false'"></i>
             <i class="glyphicon glyphicon-floppy-disk" ng-show="editMode === 'true'"></i>
         </a>
     </span>
